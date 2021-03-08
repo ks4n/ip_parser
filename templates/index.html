@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<center>
+
+    instructions<br>
+1 - go to https://hackerwars.io/list?page=1 <br>
+2 - copy all code html<br>
+3 - paste the code in the box<br>
+4 - click  in analyze<br>
+
+<form method="POST" id="input-user">
+    <input class='input-user' name="text" >
+
+
+    <br>
+    <input type="submit" value="analyze">
+</form>
+
+
+</center>
+
+
+<p><b>Results</b></p>
+<form class="log" action="software" method="POST">
+
+
+<table class="table">
+<tr>
+
+<th >IPS VPC  </th>
+<th >IPS NPC </th>
+<th >IPS 100mb</th>
+<th >IPS 250mb</th>
+<th >IPS 500mb</th>
+<th >IPS 1gb</th>
+
+
+
+<tr>
+<td><textarea  disabled rows="10" id="ips_vpc">
+                {% for vpc in all_vpc %}
+                {{ vpc }},
+                {% endfor %}
+
+</textarea></td>
+
+<td><textarea disabled rows="10" id="ips_npc">
+           {% for npc in all_npc %}
+            {{ npc }},
+            {% endfor %}
+
+</textarea></td>
+
+    <td><textarea disabled rows="10" id="ips_100mb">
+                 {% for ip_100 in ip_100_mb %}
+                {{ ip_100 }},
+                {% endfor %}
+
+</textarea></td>
+
+        <td><textarea disabled rows="10" id="ips_250mb">
+                {% for ip_250 in ip_250_mb %}
+                {{ ip_250 }},
+                {% endfor %}
+
+</textarea></td>
+
+        <td><textarea disabled rows="10" id="ips_500mb">
+                 {% for ip_500 in ip_500_mb %}
+                {{ ip_500 }},
+                {% endfor %}
+
+
+</textarea></td>
+
+        <td><textarea disabled rows="10" id="ips_1gb">
+                 {% for ip_1gb in ip_1gb %}
+                {{ ip_1gb }},
+                {% endfor %}
+
+</textarea></td>
+
+
+
+
+</table>
+</form>
+
+
+
+
+<style>
+
+
+.input-user {width: 300px; height: 300px}
+
+</style>
+
+
+
+
+</body>
+</html>
